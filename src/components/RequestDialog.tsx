@@ -29,7 +29,7 @@ export function RequestDialog({ serviceId, planId, onClose }: { serviceId: strin
       <span className="eyebrow">بدون پرداخت و بدون ثبت‌نام</span>
       <h2 id="request-title">{prepared ? 'درخواست شما آمادهٔ ارسال است' : 'درخواست پیش‌نمایش رایگان'}</h2>
       {!prepared ? <form onSubmit={e => { e.preventDefault(); if (name.trim()) setPrepared(true); }}>
-        <p>دو انتخاب کوتاه و نام کسب‌وکارتان را وارد کنید؛ سپس متن درخواست را برای نوینیا می‌فرستید.</p>
+        <p>نام کسب‌وکار و خدمت موردنظرتان را وارد کنید؛ سپس درخواست را در واتساپ برای نوینیا بفرستید.</p>
         <label htmlFor="business-name">نام شما یا کسب‌وکار</label>
         <input id="business-name" autoFocus required maxLength={100} value={name} onChange={e=>setName(e.target.value)} placeholder="مثلاً اتوبار پارس" autoComplete="organization"/>
         <label htmlFor="business-job">حوزهٔ فعالیت</label>
@@ -41,12 +41,12 @@ export function RequestDialog({ serviceId, planId, onClose }: { serviceId: strin
         <p className="form-note">این مرحله فقط متن را آماده می‌کند. اطلاعات با ارسال پیام توسط شما در اختیار نوینیا قرار می‌گیرد.</p>
         <button type="submit" className="primary full">ادامه و آماده‌سازی درخواست <ArrowRight size={18}/></button>
       </form> : <div>
-        <p><strong>هنوز پیامی ارسال نشده است.</strong> پیام را در برنامهٔ پیامک باز کنید و ارسال را بزنید، یا متن را کپی کنید و به شمارهٔ زیر بفرستید.</p>
+        <p>با دکمهٔ زیر، گفت‌وگو با نوینیا در واتساپ باز می‌شود. متن آماده را بررسی کنید و ارسال را بزنید.</p>
         <label htmlFor="request-message">متن آمادهٔ درخواست</label>
         <textarea id="request-message" className="message-preview" readOnly value={text} rows={6}/>
-        <a className="primary full" href={`sms:${contactPhone}?body=${encodeURIComponent(text)}`}><MessageSquare size={18}/> باز کردن پیامک برای ارسال</a>
+        <a className="primary full" href={`https://wa.me/98${contactPhone.slice(1)}?text=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer"><MessageSquare size={18}/> ارسال درخواست در واتساپ</a>
         <button className="secondary full" onClick={copy}><Copy size={18}/> کپی متن درخواست</button>
-        <p className="form-note">اگر پیامک روی این دستگاه باز نمی‌شود، متن را از گوشی ارسال کنید یا تماس بگیرید. آماده‌سازی و کپی متن، ثبت سفارش نیست.</p>
+        <p className="form-note">اگر واتساپ باز نشد، متن را کپی و در واتساپ برای {contactDisplay} ارسال کنید یا تماس بگیرید. درخواست پس از ارسال پیام به دست نوینیا می‌رسد.</p>
         <p role="status">{feedback}</p>
         <button className="text-button" onClick={()=>setPrepared(false)}>ویرایش اطلاعات درخواست</button>
       </div>}

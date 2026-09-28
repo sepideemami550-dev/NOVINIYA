@@ -14,7 +14,7 @@ Remove obsolete public JS bundles during deployment; do not expose old build art
 ## Request behavior
 
 The request dialog prepares a message locally. It does not create an order or send SMS automatically.
-The customer sends it through the SMS app or copies it and contacts Noviniya directly.
+The customer opens the prefilled WhatsApp chat at 989127050799 and sends the request, or contacts Noviniya directly. Confirmation SMS must be sent by Noviniya after actual registration; automatic confirmation still requires a secure backend.
 Do not display successful delivery until a real backend confirms delivery. No API credentials belong
 in browser code. The previously published SMS credential must be rotated by its owner before reuse.
 
