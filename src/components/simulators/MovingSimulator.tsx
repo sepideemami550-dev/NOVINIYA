@@ -37,11 +37,11 @@ export const MovingSimulator: React.FC = () => {
           </div>
           <div>
             <h4 className="font-bold text-base text-neutral-100">دموی تعاملی: محاسبه‌گر دقیق هزینه اسباب‌کشی</h4>
-            <span className="text-xs text-neutral-400">قیمت قطعی و تضمینی بدون دبه و افزایش کرایه پای ماشین</span>
+            <span className="text-xs text-neutral-400">گزینه‌ها را تغییر دهید و برآورد نمایشی را مقایسه کنید.</span>
           </div>
         </div>
         <span className="text-xs font-mono text-sky-400/90 bg-sky-500/10 px-2.5 py-1 rounded-md">
-          نرخ مصوب اتحادیه ۱۴۰۴
+          تعرفهٔ نمایشی
         </span>
       </div>
 
@@ -175,7 +175,7 @@ export const MovingSimulator: React.FC = () => {
         {/* Total Box */}
         <div className="bg-neutral-950/70 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between">
           <div>
-            <div className="text-xs text-neutral-400 font-medium mb-1">کرایه قطعی و نهایی اسباب‌کشی:</div>
+            <div className="text-xs text-neutral-400 font-medium mb-1">برآورد آزمایشی اسباب‌کشی:</div>
             <div className="text-3xl font-black text-sky-400 tabular-nums">
               {(totalCost * 1000).toLocaleString('fa-IR')}{' '}
               <span className="text-sm font-normal text-neutral-400">تومان</span>
@@ -199,6 +199,7 @@ export const MovingSimulator: React.FC = () => {
                   <span>{((originFloorCharge + destFloorCharge) * 1000).toLocaleString('fa-IR')} ت</span>
                 </div>
               )}
+              {packingCharge > 0 && <div className="flex justify-between text-neutral-400"><span>بسته‌بندی:</span><span>{(packingCharge * 1000).toLocaleString('fa-IR')} ت</span></div>}
               {heavyItemsCharge > 0 && (
                 <div className="flex justify-between text-sky-400/90">
                   <span>وسایل سنگین و حساس:</span>
@@ -212,31 +213,24 @@ export const MovingSimulator: React.FC = () => {
             {booked ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>سفارش ثبت شد! راننده خاور جهت تایید ساعت و آدرس دقیق با شما تماس می‌گیرد.</span>
+                <span>آزمایش کامل شد؛ هیچ خودرویی رزرو نشده و پیامی ارسال نشده است.</span>
               </div>
             ) : (
               <div className="space-y-2">
                 <label className="text-xs text-neutral-300 block">
-                  رزرو فوری خاور و ارسال پیش‌فاکتور به گوشی:
+                  پیش‌نمایش مرحلهٔ درخواست برای خودروی انتخابی:
                 </label>
                 <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    placeholder="۰۹۱۲۳۴۵۶۷۸۹"
-                    value={leadPhone}
-                    onChange={(e) => setLeadPhone(e.target.value)}
-                    dir="ltr"
-                    className="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-sky-500"
-                  />
+                  <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
                   <button
                     type="button"
                     onClick={() => {
-                      if (leadPhone.length >= 10) setBooked(true);
+                      setBooked(true);
                     }}
                     className="px-4 py-2 bg-sky-500 hover:bg-sky-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
-                    رزرو قطعی
+                    آزمایش رزرو
                   </button>
                 </div>
               </div>

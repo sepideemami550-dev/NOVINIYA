@@ -155,28 +155,21 @@ export const CleaningSimulator: React.FC = () => {
             {ordered ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>درخواست ثبت شد! کارشناس اعزام نیرو تا ۱۰ دقیقه دیگر هماهنگ می‌کند.</span>
+                <span>آزمایش کامل شد؛ درخواست اعزام نیرو ثبت نشده است.</span>
               </div>
             ) : (
               <div className="space-y-2">
                 <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    placeholder="شماره موبایل (۰۹۱۲۳۴۵۶۷۸۹)"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    dir="ltr"
-                    className="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-teal-500"
-                  />
+                  <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
                   <button
                     type="button"
                     onClick={() => {
-                      if (phone.length >= 10) setOrdered(true);
+                      setOrdered(true);
                     }}
                     className="px-4 py-2 bg-teal-500 hover:bg-teal-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
-                    اعزام فوری
+                    آزمایش درخواست نیرو
                   </button>
                 </div>
               </div>

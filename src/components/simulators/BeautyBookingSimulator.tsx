@@ -276,7 +276,7 @@ export const BeautyBookingSimulator: React.FC = () => {
         {/* Pricing & Booking */}
         <div className="bg-neutral-950/70 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between">
           <div>
-            <div className="text-xs text-neutral-400 font-medium mb-1">تعرفه قطعی خدمت:</div>
+            <div className="text-xs text-neutral-400 font-medium mb-1">تعرفهٔ نمایشی خدمت:</div>
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-black text-rose-400 tabular-nums">
                 {(finalPrice * 1000).toLocaleString('fa-IR')}
@@ -306,7 +306,7 @@ export const BeautyBookingSimulator: React.FC = () => {
             {confirmed ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>نوبت با موفقیت ثبت موقت شد! پیامک هماهنگی و آدرس دقیق ارسال گردید.</span>
+                <span>نمونهٔ تأیید نوبت را دیدید؛ نوبت واقعی ثبت نشده و پیامکی ارسال نشده است.</span>
               </div>
             ) : (
               <div className="space-y-2">
@@ -318,22 +318,15 @@ export const BeautyBookingSimulator: React.FC = () => {
                   className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-rose-500"
                 />
                 <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    placeholder="شماره تماس (۰۹۱۲۳۴۵۶۷۸۹)"
-                    value={clientPhone}
-                    onChange={(e) => setClientPhone(e.target.value)}
-                    dir="ltr"
-                    className="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-rose-500"
-                  />
+                  <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
                   <button
                     type="button"
                     onClick={() => {
-                      if (clientPhone.length >= 10) setConfirmed(true);
+                      setConfirmed(true);
                     }}
                     className="px-4 py-2 bg-rose-500 hover:bg-rose-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1 whitespace-nowrap"
                   >
-                    تایید نوبت
+                    آزمایش تأیید نوبت
                   </button>
                 </div>
               </div>

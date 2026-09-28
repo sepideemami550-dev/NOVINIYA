@@ -5,7 +5,7 @@ import { BeautyBookingSimulator } from './simulators/BeautyBookingSimulator';
 import { CafeMenuSimulator } from './simulators/CafeMenuSimulator';
 import { RealEstateSimulator } from './simulators/RealEstateSimulator';
 import { SingleProductSimulator } from './simulators/SingleProductSimulator';
-import { DigitalCardSimulator } from './simulators/DigitalCardSimulator';
+import { DigitalCardSimulator } from './simulators/BusinessCardDemo';
 import { CleaningSimulator } from './simulators/CleaningSimulator';
 import { WeddingBudgetSimulator } from './simulators/WeddingBudgetSimulator';
 import { TaxSalarySimulator } from './simulators/TaxSalarySimulator';

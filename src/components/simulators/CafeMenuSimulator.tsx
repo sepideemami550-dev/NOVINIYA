@@ -53,7 +53,7 @@ export const CafeMenuSimulator: React.FC = () => {
           </div>
           <div>
             <h4 className="font-bold text-base text-neutral-100">دموی تعاملی: منوی دیجیتال QR کد کافه و رستوران</h4>
-            <span className="text-xs text-neutral-400">سفارش‌گیری آنلاین سر میز بدون کارمزد ۲۰ درصدی اسنپ‌فود</span>
+            <span className="text-xs text-neutral-400">نمونهٔ انتخاب غذا و محاسبهٔ صورتحساب سر میز</span>
           </div>
         </div>
         <span className="text-xs font-mono text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md">
@@ -86,6 +86,7 @@ export const CafeMenuSimulator: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateQuantity(item.id, 1)}
+                    aria-label={`افزودن ${item.name}`}
                     className="p-1 hover:bg-neutral-800 text-neutral-300 rounded"
                   >
                     <Plus className="w-3.5 h-3.5" />
@@ -96,6 +97,7 @@ export const CafeMenuSimulator: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateQuantity(item.id, -1)}
+                    aria-label={`کم کردن ${item.name}`}
                     disabled={qty === 0}
                     className="p-1 hover:bg-neutral-800 text-neutral-300 rounded disabled:opacity-30"
                   >
@@ -164,7 +166,7 @@ export const CafeMenuSimulator: React.FC = () => {
             {orderSent ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <Check className="w-4 h-4 shrink-0" />
-                <span>سفارش با فرمت آماده به واتساپ باریستا و چاپگر صندوق ارسال شد!</span>
+                <span>فاکتور آزمایشی آماده شد؛ هیچ سفارشی به رستوران یا واتساپ ارسال نشده است.</span>
               </div>
             ) : (
               <button
@@ -174,7 +176,7 @@ export const CafeMenuSimulator: React.FC = () => {
                 className="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-40"
               >
                 <Send className="w-3.5 h-3.5" />
-                ارسال فاکتور و ثبت سفارش در واتساپ
+                آزمایش آماده‌سازی فاکتور
               </button>
             )}
           </div>

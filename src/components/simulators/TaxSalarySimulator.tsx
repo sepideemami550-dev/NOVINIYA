@@ -47,7 +47,7 @@ export const TaxSalarySimulator: React.FC = () => {
 ضریب سود صنفی: ${profitMarginPercent}٪
 سود مشمول: ${taxableProfitMillion.toFixed(1)} میلیون تومان
 معافیت سالانه قانون بودجه: ${exemptCeilingMillion} میلیون تومان
-مالیات قطعی تخمینی: ${estimatedTaxMillion.toFixed(1)} میلیون تومان`;
+مالیات نمایشی: ${estimatedTaxMillion.toFixed(1)} میلیون تومان`;
     } else {
       text = `فیش برآورد حقوق و بیمه قانون کار:
 جمع کل ناخالص دریافتی: ${grossSalary.toFixed(2)} میلیون تومان
@@ -195,7 +195,7 @@ export const TaxSalarySimulator: React.FC = () => {
           <div>
             {activeTab === 'posTax' ? (
               <>
-                <div className="text-xs text-neutral-400 font-medium mb-1">مالیات قطعی تخمینی سالانه:</div>
+                <div className="text-xs text-neutral-400 font-medium mb-1">مالیات نمایشی سالانه:</div>
                 <div className="text-3xl font-black text-violet-400 tabular-nums">
                   {(Math.round(estimatedTaxMillion * 10) / 10).toLocaleString('fa-IR')}{' '}
                   <span className="text-sm font-normal text-neutral-400">میلیون تومان</span>

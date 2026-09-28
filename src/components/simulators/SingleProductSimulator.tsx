@@ -17,11 +17,11 @@ export const SingleProductSimulator: React.FC = () => {
           </div>
           <div>
             <h4 className="font-bold text-base text-neutral-100">دموی تعاملی: لندینگ پیج فروشگاهی تک‌محصولی با تسویه‌حساب سریع</h4>
-            <span className="text-xs text-neutral-400">فروش مستقیم محصولات پرتقاضای دیوار بدون نیاز به اینماد و سایت‌های پیچیده</span>
+            <span className="text-xs text-neutral-400">نمونهٔ صفحهٔ معرفی محصول و دریافت درخواست خرید</span>
           </div>
         </div>
         <span className="text-xs font-mono text-orange-400/90 bg-orange-500/10 px-2.5 py-1 rounded-md">
-          تایمر تخفیف: ۰۳:۴۲:۱۹
+          محصول نمایشی
         </span>
       </div>
 
@@ -34,7 +34,7 @@ export const SingleProductSimulator: React.FC = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
                 ))}
-                <span className="text-[11px] text-neutral-400 mr-1.5">(۴.۹ از ۵ · ۳۸۲ نظر خریدار)</span>
+                <span className="text-[11px] text-neutral-400 mr-1.5">(نمونهٔ نمایش امتیاز؛ فاقد نظر واقعی)</span>
               </div>
               <h5 className="font-bold text-sm text-neutral-100">
                 پک اختصاصی ادکلن فرانسوی اکستریت د پرفیوم (ماندگاری ۴۸ ساعته)
@@ -82,14 +82,7 @@ export const SingleProductSimulator: React.FC = () => {
                 onChange={(e) => setBuyerName(e.target.value)}
                 className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-orange-500"
               />
-              <input
-                type="tel"
-                placeholder="شماره موبایل جهت هماهنگی و کد پیگیری"
-                value={buyerPhone}
-                onChange={(e) => setBuyerPhone(e.target.value)}
-                dir="ltr"
-                className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-orange-500"
-              />
+              <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
               <div className="grid grid-cols-2 gap-2">
                 <input
                   type="text"
@@ -114,17 +107,17 @@ export const SingleProductSimulator: React.FC = () => {
             {ordered ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>سفارش با موفقیت ثبت شد! پیامک تایید و کد رهگیری پستی به شماره شما ارسال گردید.</span>
+                <span>آزمایش کامل شد؛ هیچ خرید، پرداخت یا ارسال کالایی انجام نشده است.</span>
               </div>
             ) : (
               <button
                 type="button"
                 onClick={() => {
-                  if (buyerPhone.length >= 10) setOrdered(true);
+                  setOrdered(true);
                 }}
                 className="w-full py-2.5 bg-orange-500 hover:bg-orange-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5"
               >
-                ثبت سفارش نهایی و ارسال فوری (۸۹۰,۰۰۰ تومان)
+                آزمایش سفارش (بدون پرداخت)
               </button>
             )}
           </div>

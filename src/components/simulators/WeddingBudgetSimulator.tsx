@@ -148,28 +148,21 @@ export const WeddingBudgetSimulator: React.FC = () => {
             {booked ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>دعوت‌نامه تست رایگان شام عروسی و بازدید باغ‌تالار به شماره شما پیامک شد!</span>
+                <span>نمونهٔ رزرو نمایش داده شد؛ رزرو واقعی و ارسال پیامک انجام نشده است.</span>
               </div>
             ) : (
               <div className="space-y-2">
                 <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    placeholder="شماره تماس زوجین (۰۹۱۲۳۴۵۶۷۸۹)"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    dir="ltr"
-                    className="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-yellow-500"
-                  />
+                  <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
                   <button
                     type="button"
                     onClick={() => {
-                      if (phone.length >= 10) setBooked(true);
+                      setBooked(true);
                     }}
                     className="px-4 py-2 bg-yellow-500 hover:bg-yellow-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
-                    رزرو تست منو
+                    آزمایش رزرو
                   </button>
                 </div>
               </div>

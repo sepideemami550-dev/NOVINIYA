@@ -33,7 +33,7 @@ export const RenovationSimulator: React.FC = () => {
           </div>
           <div>
             <h4 className="font-bold text-base text-neutral-100">دموی تعاملی: محاسبه‌گر هزینه بازسازی و نوسازی</h4>
-            <span className="text-xs text-neutral-400">ابزاری که کارفرمایان تشنه دیدن اعداد شفاف آن در دیوار هستند</span>
+            <span className="text-xs text-neutral-400">نمونهٔ نمایش قیمت بر اساس متراژ و خدمات انتخابی</span>
           </div>
         </div>
         <span className="text-xs font-mono text-amber-400/90 bg-amber-500/10 px-2.5 py-1 rounded-md">
@@ -167,31 +167,24 @@ export const RenovationSimulator: React.FC = () => {
             {isSubmitted ? (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>شماره شما ثبت شد. مهندس مشاور ظرف ۱۵ دقیقه با شما تماس می‌گیرد!</span>
+                <span>آزمایش کامل شد؛ هیچ درخواستی ثبت نشده و تماسی انجام نمی‌شود.</span>
               </div>
             ) : (
               <div className="space-y-2">
                 <label className="text-xs text-neutral-300 block">
-                  دریافت رایگان فایل PDF ریز اقلام و مشاوره مهندسی:
+                  نمونهٔ مرحلهٔ درخواست (بدون ثبت واقعی):
                 </label>
                 <div className="flex gap-2">
-                  <input
-                    type="tel"
-                    placeholder="۰۹۱۲۳۴۵۶۷۸۹"
-                    value={leadPhone}
-                    onChange={(e) => setLeadPhone(e.target.value)}
-                    dir="ltr"
-                    className="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-amber-500"
-                  />
+                  <p className="text-xs text-neutral-300">برای آزمایش، شمارهٔ واقعی لازم نیست.</p>
                   <button
                     type="button"
                     onClick={() => {
-                      if (leadPhone.length >= 10) setIsSubmitted(true);
+                      setIsSubmitted(true);
                     }}
                     className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
-                    ثبت درخواست
+                    آزمایش درخواست
                   </button>
                 </div>
               </div>
