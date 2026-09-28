@@ -86,6 +86,22 @@ html{scroll-behavior:smooth}body{margin:0}#samples,#plans,#process,#faq,#contact
 @media(max-width:900px){.nvx-nav{display:none}.nvx-hero-grid{grid-template-columns:1fr;gap:30px}.nvx-browser{max-width:680px}.nvx-demo-cards,.nvx-journey{grid-template-columns:1fr}.nvx-case{grid-template-columns:1fr}.nvx-solutions{grid-template-columns:repeat(2,1fr)}.nvx-proofstrip-row{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.nvx-wrap{padding:0 16px}.nvx-head-row{min-height:64px}.nvx-brand-copy small{display:none}.nvx-call{padding:9px 11px;font-size:11px}.nvx-hero{padding:38px 0 28px}.nvx-hero h1{font-size:32px;line-height:1.5;letter-spacing:-.5px}.nvx-lead{font-size:15px}.nvx-actions{display:grid;grid-template-columns:1fr}.nvx-microproof{gap:10px 12px}.nvx-demo{padding:19px}.nvx-section{padding:48px 0}.nvx-heading h2{font-size:26px}.nvx-solutions{grid-template-columns:1fr}.nvx-proofstrip-row{grid-template-columns:1fr 1fr}.nvx-proofitem{border-left:0}.nvx-case-grid{grid-template-columns:1fr}}
 </style>
+<style id="nvx-v2-style">
+.nvx-browser .nvx-demo{padding:22px}
+.nvx-demo-progress{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 18px}
+.nvx-demo-progress span{height:5px;border-radius:999px;background:#e8eeea}
+.nvx-demo-progress span.active{background:var(--nvx-green)}
+.nvx-step{display:none}.nvx-step.active{display:block}
+.nvx-step-title{font-size:20px;font-weight:950;margin:5px 0 6px}.nvx-step-text{font-size:12px;color:var(--nvx-muted);line-height:1.9;margin:0 0 16px}
+.nvx-choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.nvx-choice{border:1px solid #dfe7e2;background:#fff;border-radius:12px;padding:11px 10px;font-family:inherit;font-size:12px;font-weight:850;color:var(--nvx-ink);cursor:pointer;text-align:right}
+.nvx-choice.active{border-color:#9ddbb7;background:#effaf3;color:var(--nvx-green-dark);box-shadow:0 0 0 2px rgba(0,168,89,.06)}
+.nvx-demo-nav{display:flex;gap:9px;margin-top:18px}.nvx-demo-nav button{flex:1;min-height:42px;border-radius:12px;border:1px solid #dce5df;background:#fff;font-family:inherit;font-weight:900;cursor:pointer}.nvx-demo-nav .next{background:var(--nvx-green);border-color:var(--nvx-green);color:#fff}.nvx-demo-nav .back[disabled]{opacity:.45;cursor:default}
+.nvx-preview-card{border:1px solid #dfe9e2;background:#f8fbf9;border-radius:15px;padding:14px;margin-top:12px}.nvx-preview-card dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:8px 16px;font-size:12px}.nvx-preview-card dt{color:#68756d}.nvx-preview-card dd{margin:0;font-weight:900}.nvx-demo-finish{padding:14px;border-radius:15px;background:#eef9f2;border:1px solid #d5ecde;margin-top:14px}.nvx-demo-finish b{display:block;color:var(--nvx-green-dark);margin-bottom:5px}.nvx-demo-finish p{margin:0;color:#5d6a62;font-size:12px;line-height:1.9}
+.nvx-audit{padding:64px 0;background:#10251a;color:#fff}.nvx-audit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.nvx-audit .nvx-kicker{color:#91d6ad;font-weight:950;font-size:12px}.nvx-audit h2{font-size:34px;line-height:1.55;margin:7px 0 10px}.nvx-audit p{color:#d2dfd7;line-height:1.95;font-size:14px;margin:0}.nvx-audit-card{background:#fff;color:var(--nvx-ink);border-radius:22px;padding:24px}.nvx-audit-card ol{margin:0;padding:0 20px 0 0}.nvx-audit-card li{margin:10px 0;color:#536159;font-size:13px;line-height:1.8}.nvx-audit-output{margin-top:14px;padding:12px 14px;border-radius:13px;background:#f1faf4;border:1px solid #d9eee1;color:var(--nvx-green-dark);font-size:12px;font-weight:900}.nvx-audit .nvx-actions{margin-top:22px}.nvx-audit .nvx-btn.secondary{background:transparent;color:#fff;border-color:#496456}
+@media(max-width:900px){.nvx-audit-grid{grid-template-columns:1fr}.nvx-audit-card{max-width:680px}}
+@media(max-width:560px){.nvx-choice-grid{grid-template-columns:1fr}.nvx-audit{padding:48px 0}.nvx-audit h2{font-size:27px}}
+</style>
 </head>
   <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
@@ -93,7 +109,7 @@ html{scroll-behavior:smooth}body{margin:0}#samples,#plans,#process,#faq,#contact
 <header class="nvx-head"><div class="nvx-wrap nvx-head-row">
 <a class="nvx-brand" href="#nvx-top" aria-label="نوینیا، ابتدای صفحه"><span class="nvx-mark">ن</span><span class="nvx-brand-copy"><b>نوینیا</b><small>راهکار دیجیتال برای مسیر فروش</small></span></a>
 <nav class="nvx-nav" aria-label="منوی اصلی"><a href="#nvx-demos">دموها</a><a href="#nvx-journey">مسئله‌ها</a><a href="#nvx-solutions">راهکارها</a><a href="#process">مراحل همکاری</a><a href="#faq">پرسش‌ها</a></nav>
-<a class="nvx-call" href="#contact">بررسی کسب‌وکار من</a>
+<a class="nvx-call" href="#nvx-audit">بررسی کسب‌وکار من</a>
 </div></header>
 
 <section id="nvx-top" class="nvx-hero"><div class="nvx-wrap nvx-hero-grid">
@@ -101,20 +117,63 @@ html{scroll-behavior:smooth}body{margin:0}#samples,#plans,#process,#faq,#contact
 <span class="nvx-badge">وب‌اپلیکیشن · وب‌سایت · ابزارهای فروش</span>
 <h1>مسیر آنلاین کسب‌وکارتان را از <em>بازدید تا سفارش</em>، ساده‌تر کنید.</h1>
 <p class="nvx-lead">نوینیا وب‌اپلیکیشن، وب‌سایت و ابزارهای دیجیتال اختصاصی می‌سازد تا خدماتتان را حرفه‌ای‌تر ارائه کنید، مشتری راحت‌تر تصمیم بگیرد و درخواست‌ها و سفارش‌ها منظم‌تر وارد فرآیند فروش شوند.</p>
-<div class="nvx-actions"><a class="nvx-btn primary" href="#nvx-demos">مشاهده دموهای واقعی</a><a class="nvx-btn secondary" href="#contact">بررسی کسب‌وکار من</a></div>
+<div class="nvx-actions"><a class="nvx-btn primary" href="#nvx-demos">مشاهده دموهای واقعی</a><a class="nvx-btn secondary" href="#nvx-audit">بررسی کسب‌وکار من</a></div>
 <ul class="nvx-microproof"><li>دموی قابل تست قبل از تصمیم</li><li>طراحی موبایل‌فرست</li><li>هزینه و محدوده کار قبل از شروع روشن</li></ul>
 </div>
 
-<div class="nvx-browser" aria-label="دموی تعاملی محاسبه قیمت">
-<div class="nvx-browser-top"><i></i><i></i><i></i><span class="nvx-browser-url">demo.noviniya.ir / estimate</span></div>
+<div class="nvx-browser" aria-label="دموی کامل مسیر استعلام تا درخواست">
+<div class="nvx-browser-top"><i></i><i></i><i></i><span class="nvx-browser-url">demo.noviniya.ir / customer-flow</span></div>
 <div class="nvx-demo">
-<span class="nvx-demo-kicker">دموی زنده — همین‌جا امتحان کنید</span>
-<h2>برآورد اولیه خدمت</h2><p>نوع خدمت و مقدار را تغییر دهید تا نتیجه نمونه همان لحظه به‌روزرسانی شود.</p>
-<label class="nvx-field"><span><b>نوع خدمت</b><small id="nvx-service-label">بازسازی و دکوراسیون</small></span><select id="nvx-service"><option value="3">بازسازی و دکوراسیون</option><option value="1.6">نظافت و خدمات منزل</option><option value="2.2">باربری و اسباب‌کشی</option><option value="1.1">خدمات زیبایی</option></select></label>
-<label class="nvx-field"><span><b>مقدار نمونه</b><small><span id="nvx-unit-value">۸۵</span> واحد</small></span><input id="nvx-unit" type="range" min="40" max="200" step="5" value="85"></label>
+<span class="nvx-demo-kicker">دموی زنده — مسیر کامل را امتحان کنید</span>
+<div class="nvx-demo-progress" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+
+<div class="nvx-step active" data-step="1">
+<div class="nvx-step-title">۱. کسب‌وکار شما چیست؟</div>
+<p class="nvx-step-text">یکی را انتخاب کنید؛ در نسخه واقعی همین مرحله با خدمات کسب‌وکار شما تنظیم می‌شود.</p>
+<div class="nvx-choice-grid" data-group="business">
+<button type="button" class="nvx-choice active" data-value="بازسازی و دکوراسیون">بازسازی و دکوراسیون</button>
+<button type="button" class="nvx-choice" data-value="کلینیک و زیبایی">کلینیک و زیبایی</button>
+<button type="button" class="nvx-choice" data-value="باربری و خدمات">باربری و خدمات</button>
+<button type="button" class="nvx-choice" data-value="فروش محصول">فروش محصول</button>
+</div>
+</div>
+
+<div class="nvx-step" data-step="2">
+<div class="nvx-step-title">۲. مشتری چه کاری انجام دهد؟</div>
+<p class="nvx-step-text">هدف اصلی ابزار را انتخاب کنید.</p>
+<div class="nvx-choice-grid" data-group="goal">
+<button type="button" class="nvx-choice active" data-value="برآورد قیمت بگیرد">برآورد قیمت بگیرد</button>
+<button type="button" class="nvx-choice" data-value="خدمت مناسب را انتخاب کند">خدمت مناسب را انتخاب کند</button>
+<button type="button" class="nvx-choice" data-value="درخواست یا نوبت ثبت کند">درخواست یا نوبت ثبت کند</button>
+<button type="button" class="nvx-choice" data-value="برای خرید اقدام کند">برای خرید اقدام کند</button>
+</div>
+</div>
+
+<div class="nvx-step" data-step="3">
+<div class="nvx-step-title">۳. یک ورودی نمونه بدهید</div>
+<p class="nvx-step-text">این عدد فقط برای نمایش رفتار ابزار است و قیمت واقعی محسوب نمی‌شود.</p>
+<label class="nvx-field"><span><b>مقدار / متراژ / تعداد نمونه</b><small><span id="nvx-unit-value">۸۵</span> واحد</small></span><input id="nvx-unit" type="range" min="40" max="200" step="5" value="85"></label>
 <div class="nvx-result"><span>برآورد نمایشی</span><strong><span id="nvx-total">۲۵۵</span> <small>میلیون تومان</small></strong></div>
-<small class="nvx-demo-note">این مبلغ واقعی نیست و فقط برای نمایش عملکرد ابزار است؛ نسخه نهایی با فرمول و تعرفه کسب‌وکار شما تنظیم می‌شود.</small>
-<div class="nvx-actions" style="margin-top:16px"><a class="nvx-btn secondary" style="width:100%;box-sizing:border-box" href="#samples">دیدن دموهای کامل</a></div>
+<small class="nvx-demo-note">فرمول واقعی در پروژه شما بر اساس تعرفه و منطق کسب‌وکار تنظیم می‌شود.</small>
+</div>
+
+<div class="nvx-step" data-step="4">
+<div class="nvx-step-title">۴. خروجی‌ای که مشتری می‌بیند</div>
+<p class="nvx-step-text">در نسخه واقعی، این مرحله می‌تواند به ثبت درخواست، واتساپ، تماس، رزرو یا سیستم داخلی شما وصل شود.</p>
+<div class="nvx-preview-card"><dl>
+<dt>حوزه</dt><dd id="nvx-summary-business">بازسازی و دکوراسیون</dd>
+<dt>هدف</dt><dd id="nvx-summary-goal">برآورد قیمت بگیرد</dd>
+<dt>مقدار نمونه</dt><dd><span id="nvx-summary-unit">۸۵</span> واحد</dd>
+<dt>برآورد نمایشی</dt><dd><span id="nvx-summary-total">۲۵۵</span> میلیون</dd>
+</dl></div>
+<div class="nvx-demo-finish"><b>این همان چیزی است که نوینیا برای شما اختصاصی می‌کند.</b><p>نام، لوگو، خدمات، تعرفه، سؤال‌ها و اقدام نهایی بر اساس فرآیند واقعی کسب‌وکار شما تغییر می‌کند.</p></div>
+<div class="nvx-actions" style="margin-top:14px"><a class="nvx-btn primary" style="width:100%;box-sizing:border-box" href="#nvx-audit">بررسی مسیر مناسب برای کسب‌وکار من</a></div>
+</div>
+
+<div class="nvx-demo-nav">
+<button type="button" class="back" id="nvx-back" disabled>مرحله قبل</button>
+<button type="button" class="next" id="nvx-next">مرحله بعد</button>
+</div>
 </div></div>
 </div></section>
 
@@ -155,19 +214,27 @@ html{scroll-behavior:smooth}body{margin:0}#samples,#plans,#process,#faq,#contact
 <a class="nvx-solution" href="/services/website-design/"><strong>طراحی سایت کسب‌وکار</strong><p>برای معرفی حرفه‌ای خدمات، سئو و تبدیل بازدیدکننده به اقدام مشخص.</p><span>جزئیات خدمت ←</span></a>
 <a class="nvx-solution" href="/services/customer-acquisition/"><strong>مسیر جذب و ثبت مشتری</strong><p>برای اتصال ورودی گوگل، شبکه اجتماعی یا تبلیغ به درخواست و پیگیری فروش.</p><span>جزئیات خدمت ←</span></a>
 </div></div></section>
+<section id="nvx-audit" class="nvx-audit"><div class="nvx-wrap nvx-audit-grid">
+<div><span class="nvx-kicker">بررسی اولیه قبل از سفارش</span><h2>بررسی ۲۰ دقیقه‌ای مسیر فروش آنلاین شما</h2><p>اگر مطمئن نیستید سایت، وب‌اپلیکیشن، محاسبه‌گر یا یک ابزار ساده‌تر برایتان مناسب‌تر است، ابتدا مسئله را بررسی می‌کنیم؛ هدف این جلسه فروش یک راهکار از پیش‌تعیین‌شده نیست.</p>
+<div class="nvx-actions"><a class="nvx-btn primary" href="#contact">درخواست بررسی کسب‌وکار من</a><a class="nvx-btn secondary" href="#nvx-demos">اول دموها را ببینم</a></div></div>
+<div class="nvx-audit-card"><b>در این بررسی چه اتفاقی می‌افتد؟</b><ol><li>می‌گویید مشتری امروز از کجا وارد می‌شود و کجا گیر می‌کند.</li><li>مشخص می‌کنیم مهم‌ترین اصطکاک در معرفی، تصمیم‌گیری، قیمت یا سفارش کجاست.</li><li>بررسی می‌کنیم سایت، وب‌اپ یا ابزار تعاملی اصلاً ارزش ساختن دارد یا نه.</li></ol><div class="nvx-audit-output">خروجی: پیشنهاد یک مسیر مشخص برای قدم بعدی؛ بدون تعهد خرید.</div></div>
+</div></section>
 </div>
 <script id="nvx-demo-script">
 (function(){
+var step=1,state={business:'بازسازی و دکوراسیون',goal:'برآورد قیمت بگیرد',unit:85,total:255};
 function fa(n){return Number(n).toLocaleString('fa-IR')}
-function update(){
-var s=document.getElementById('nvx-service'),u=document.getElementById('nvx-unit'),t=document.getElementById('nvx-total'),uv=document.getElementById('nvx-unit-value'),sl=document.getElementById('nvx-service-label');
-if(!s||!u||!t||!uv||!sl)return;
-var factor=parseFloat(s.value||'3'),units=parseInt(u.value||'85',10);
-uv.textContent=fa(units);t.textContent=fa(Math.round(units*factor));sl.textContent=s.options[s.selectedIndex].text;
-}
-document.addEventListener('input',function(e){if(e.target&&((e.target).id==='nvx-service'||(e.target).id==='nvx-unit'))update()});
-document.addEventListener('change',function(e){if(e.target&&(e.target).id==='nvx-service')update()});
-update();
+function factor(){var map={'بازسازی و دکوراسیون':3,'کلینیک و زیبایی':1.1,'باربری و خدمات':2.2,'فروش محصول':1.6};return map[state.business]||3}
+function calc(){state.total=Math.round(state.unit*factor());var ids={'nvx-unit-value':state.unit,'nvx-total':state.total,'nvx-summary-unit':state.unit,'nvx-summary-total':state.total};Object.keys(ids).forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=fa(ids[id])});var b=document.getElementById('nvx-summary-business'),g=document.getElementById('nvx-summary-goal');if(b)b.textContent=state.business;if(g)g.textContent=state.goal}
+function render(){document.querySelectorAll('.nvx-step').forEach(function(el){el.classList.toggle('active',Number(el.getAttribute('data-step'))===step)});document.querySelectorAll('.nvx-demo-progress span').forEach(function(el,i){el.classList.toggle('active',i<step)});var back=document.getElementById('nvx-back'),next=document.getElementById('nvx-next');if(back)back.disabled=step===1;if(next){next.textContent=step===4?'شروع دوباره':'مرحله بعد'}calc()}
+document.addEventListener('click',function(e){
+var t=e.target;if(!(t instanceof HTMLElement))return;
+if(t.classList.contains('nvx-choice')){var group=t.parentElement&&t.parentElement.getAttribute('data-group');if(group){t.parentElement.querySelectorAll('.nvx-choice').forEach(function(x){x.classList.remove('active')});t.classList.add('active');if(group==='business')state.business=t.getAttribute('data-value')||state.business;if(group==='goal')state.goal=t.getAttribute('data-value')||state.goal;calc()}}
+if(t.id==='nvx-next'){step=step===4?1:step+1;render()}
+if(t.id==='nvx-back'&&step>1){step--;render()}
+});
+document.addEventListener('input',function(e){var t=e.target;if(t&&t.id==='nvx-unit'){state.unit=parseInt(t.value||'85',10);calc()}});
+render();
 })();
 </script>
 <div id="root">
